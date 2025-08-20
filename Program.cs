@@ -10,8 +10,18 @@ string formattedText = StringFormatter.ToCommaSeparatedList(new string[] { "toyo
 
 Console.WriteLine($"Output: {formattedText}");
 
+formattedText = StringFormatter.ToCommaSeparatedList(new string[] { "toyota", "honda", "BMW" }, "*");
+
+Console.WriteLine($"Output: {formattedText}");
+
 //Test with null quote
 formattedText = StringFormatter.ToCommaSeparatedList(new string[] { "toyota", "honda", "BMW" }, null);
+
+Console.WriteLine($"Output: {formattedText}");
+
+
+//Test with null item in the array
+formattedText = StringFormatter.ToCommaSeparatedList(new string[] { "toyota", null, "BMW" }, "\"");
 
 Console.WriteLine($"Output: {formattedText}");
 
