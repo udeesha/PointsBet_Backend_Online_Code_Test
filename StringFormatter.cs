@@ -29,7 +29,7 @@ namespace PointsBet_Backend_Online_Code_Test
             if (items == null || items.Length == 0)
                 throw new ArgumentException("Items array cannot be null or empty.", nameof(items));
             else
-                return string.Join(",", items.Select(i => $"{quote ?? ""}{i}{quote ?? ""}"));
+                return string.Join(",", items.Select(item => $"{quote ?? ""}{item}{quote ?? ""}"));
                         
         }
     }
